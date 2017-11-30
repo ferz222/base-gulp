@@ -5,7 +5,7 @@
 1. Клонируем проект
 `git clone https://github.com/ferz222/base-gulp.git ./`
 2. Удаляем папку .git
-`rm -rf`
+`rm -rf .git`
 3. Инсталируем зависимости
 `npm install`
 
