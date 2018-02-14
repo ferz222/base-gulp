@@ -1,0 +1,13 @@
+// import
+@import "_functions";
+@import "_variables";
+@import "_mixins";
+
+
+// styles here
+a.link {
+  color:#777;
+}
+a.active {
+  color:#ff0000;
+}

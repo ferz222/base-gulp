@@ -1,9 +1,21 @@
 /*
 * Third Party
 */
-@import "../../bower_components/normalize.css/normalize.css";
 
 /*
 * Custom
 */
-@import "partials/app";
+// @import "partials/_func";
+// @import "partials/_variables";
+// @import "partials/_app";
+
+/*
+* Components
+*/
+@import "partials/components/link/init";
+// @import "partials/components/_admin-sidebar";
+// @import "partials/components/_admin-topbar";
+
+a {
+  color: #000;
+}

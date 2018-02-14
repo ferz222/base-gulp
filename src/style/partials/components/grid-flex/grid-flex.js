@@ -1,0 +1,1 @@
+jQuery(".grid-flex").css('color', 'green');
