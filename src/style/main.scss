@@ -6,16 +6,6 @@
 * Custom
 */
 // @import "partials/_func";
-// @import "partials/_variables";
-// @import "partials/_app";
-
-/*
-* Components
-*/
-@import "partials/components/link/init";
-// @import "partials/components/_admin-sidebar";
-// @import "partials/components/_admin-topbar";
-
-a {
-  color: greenyellow;
-}
+ @import "partials/mixins/_hover";
+ @import "partials/_variables";
+ @import "partials/_reboot";
