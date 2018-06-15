@@ -44,16 +44,16 @@ $.gulp.src = function () {
 
 
 // Run build
-$.gulp.task('build:run', [
+$.gulp.task('build:run', $.gulp.series(
     'js:build',
     'html:build',
     'style:build',
     'fonts:build',
     'image:build'
-]);
+));
 
 // Run dev
-$.gulp.task('dev:run', [
+$.gulp.task('dev:run', $.gulp.parallel(
     'js:dev',
     'html:dev',
     'style:dev',
@@ -61,13 +61,10 @@ $.gulp.task('dev:run', [
     'image:dev',
     'web_server',
     'watch'
-]);
+));
 
 // Dev task
-$.gulp.task('dev', function(){
-    $.gulp.start($.gulpSync.sync(['clean:dev', ['dev:run']]));
-});
+$.gulp.task('dev', $.gulp.series('clean:dev', 'dev:run'));
+
 // Build task
-$.gulp.task('build', function(){
-    $.gulp.start($.gulpSync.sync(['clean:build', ['build:run']]));
-});
+$.gulp.task('build', $.gulp.series('clean:build', 'build:run'));
