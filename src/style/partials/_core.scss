@@ -1,0 +1,25 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #333;
+
+  &__item {
+    background-color: red;
+    color:#fff;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 50px;
+    margin-bottom: 15px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    @include width-calc($column: 3, $gutter: 30px);
+    @media screen and (max-width:767px) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+@mixin width-calc($column: 3, $gutter: 30px) {
+  width: calc((100% / #{$column}) - #{$gutter});
+}

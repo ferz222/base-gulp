@@ -21,7 +21,7 @@ module.exports = function() {
         $.gulp.src($.paths.src.style, {cwd: process.cwd()})
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.sass({
-                outputStyle: 'compressed',
+                // outputStyle: 'compressed',
                 sourceMap: true,
                 errLogToConsole: true
             }))
@@ -31,10 +31,10 @@ module.exports = function() {
             .pipe($.gp.postcss([
                 $.gp.doiuse({
                     browsers: $.paths.browsers,
-                    ignore: ['rem'],
-                    ignoreFiles: ['**/normalize.css'],
+                    ignore: ['rem', 'calc', 'text-size-adjust', 'css-appearance', 'css-resize'],
+                    ignoreFiles: ['**/normalize.css', '**/_reboot.scss'],
                     onFeatureUsage: function (usageInfo) {
-                        console.log(usageInfo.message)
+                        console.log(usageInfo)
                     }
                 })
             ]))

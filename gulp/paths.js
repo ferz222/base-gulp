@@ -31,7 +31,6 @@ module.exports = {
             'src/js/main.js'
         ],
         style: [
-            'bower_components/normalize.css/normalize.css',
             'src/style/*.scss'
         ],
         img: 'src/img/**/*.*',
@@ -44,5 +43,6 @@ module.exports = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    browsers: ['last 2 versions']
+    browsers: ['last 3 chrome versions', 'last 3 edge versions', 'last 3 firefox versions', 'last 3 safari versions', 'last 3 ios versions', 'last 3 android versions']
+    // browsers: ['last 2 versions', 'not dead']
 };
